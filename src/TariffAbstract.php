@@ -44,9 +44,10 @@ abstract class TariffAbstract implements TariffInterface
 
   public function getServices()
   {
+    $result = [];
     foreach ($this->services as $service) {
-      echo $service->name . '<br>';
+      $result[] = $service->name;
     }
-
+    return implode(', ', $result);
   }
 }
