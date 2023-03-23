@@ -21,11 +21,11 @@ function createArray()
   return $users;
 }
 
-file_put_contents('usvers.json', json_encode(createArray()));
+file_put_contents('users.json', json_encode(createArray()));
 
 function usersFromJson()
 {
-  $data = file_get_contents('usvers.json');
+  $data = file_get_contents('users.json');
   $users = json_decode($data, true);
   return $users;
 }
