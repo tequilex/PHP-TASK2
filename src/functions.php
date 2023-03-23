@@ -21,7 +21,10 @@ function createArray()
   return $users;
 }
 
-file_put_contents('users.json', json_encode(createArray()));
+function saveUsers()
+{
+  file_put_contents('users.json', json_encode(createArray()));
+}
 
 function usersFromJson()
 {
